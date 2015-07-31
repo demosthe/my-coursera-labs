@@ -48,23 +48,23 @@ public class ActivityOne extends ActionBarActivity {
         // Hint: Access the TextView by calling Activity's findViewById()
         // textView1 = (TextView) findViewById(R.id.textView1);
 
-        //Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
-        //launchActivityTwoButton.setOnClickListener(new OnClickListener() {
+        Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
+        launchActivityTwoButton.setOnClickListener(new OnClickListener() {
 
-        //    @Override
-        //    public void onClick(View v) {
-        //        // TODO:
-        //        // Launch Activity Two
-        //        // Hint: use Context's startActivity() method
+            @Override
+            public void onClick(View v) {
+                // TODO:
+                // Launch Activity Two
+                // Hint: use Context's startActivity() method
 
-        //        // Create an intent stating which Activity you would like to
-        //        // start
-        //        Intent intent = null;
+                // Create an intent stating which Activity you would like to
+                // start
+                Intent intent = null;
 
-        //        // Launch the Activity using the intent
+                // Launch the Activity using the intent
 
-        //    }
-        //});
+            }
+        });
 
 
 
