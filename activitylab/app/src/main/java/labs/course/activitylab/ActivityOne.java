@@ -46,28 +46,34 @@ public class ActivityOne extends ActionBarActivity {
 
         // TODO: Assign the appropriate TextViews to the TextView variables
         // Hint: Access the TextView by calling Activity's findViewById()
-        // textView1 = (TextView) findViewById(R.id.textView1);
+        mTvCreate = (TextView) findViewById(R.id.create);
 
         Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
         launchActivityTwoButton.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // TODO:
-                // Launch Activity Two
-                // Hint: use Context's startActivity() method
-
-                // Create an intent stating which Activity you would like to
-                // start
-                Intent intent = null;
-
-                // Launch the Activity using the intent
-
+                Intent intent = new Intent();
+                intent.setClass(ActivityOne.this, ActivityOne.class);
+                startActivity(intent);
             }
         });
 
+        // previously saved state
+        if (savedInstanceState != null) {
 
+            mRestart = savedInstanceState.getInt(RESTART_KEY);
+            mResume = savedInstanceState.getInt(RESUME_KEY);
+            mStart = savedInstanceState.getInt(START_KEY);
+            mCreate = savedInstanceState.getInt(CREATE_KEY);
 
+        }
+
+        // TODO: Emit LogCat message
+        //Log.i("ActivityOne", "Entered the onCreate method");
+
+        mCreate++;
+        //displayCounts();
     }
 
 
