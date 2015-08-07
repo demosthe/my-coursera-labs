@@ -37,16 +37,14 @@ public class ActivityOne extends ActionBarActivity {
     // TODO: Create variables for each of the TextViews
     // named mTvCreate, mTvRestart, mTvStart, mTvResume.
     // for displaying the current count of each counter variable
-    //TextView mTvCreate = new TextView(this);
+    TextView mTvCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-        // TODO: Assign the appropriate TextViews to the TextView variables
-        // Hint: Access the TextView by calling Activity's findViewById()
-        // mTvCreate = (TextView) findViewById(R.id.create);
+        mTvCreate = (TextView) findViewById(R.id.create);
 
         Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
         launchActivityTwoButton.setOnClickListener(new OnClickListener() {
