@@ -26,10 +26,10 @@ public class ActivityOne extends ActionBarActivity {
     private final static String TAG = "Lab-ActivityOne";
 
     // Lifecycle counters
-    private int mCreate = 0;
-    private int mRestart = 0;
-    private int mStart = 0;
-    private int mResume = 0;
+    //private int mCreate = 0;
+    //private int mRestart = 0;
+    //private int mStart = 0;
+    //private int mResume = 0;
 
     // You will need to increment these variables' values when their
     // corresponding lifecycle methods get called.
@@ -37,7 +37,7 @@ public class ActivityOne extends ActionBarActivity {
     // TODO: Create variables for each of the TextViews
     // named mTvCreate, mTvRestart, mTvStart, mTvResume.
     // for displaying the current count of each counter variable
-    TextView mTvCreate = new TextView(this);
+    //TextView mTvCreate = new TextView(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class ActivityOne extends ActionBarActivity {
 
         // TODO: Assign the appropriate TextViews to the TextView variables
         // Hint: Access the TextView by calling Activity's findViewById()
-        mTvCreate = (TextView) findViewById(R.id.create);
+        // mTvCreate = (TextView) findViewById(R.id.create);
 
         Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
         launchActivityTwoButton.setOnClickListener(new OnClickListener() {
@@ -60,6 +60,7 @@ public class ActivityOne extends ActionBarActivity {
         });
 
         // previously saved state
+        /*
         if (savedInstanceState != null) {
 
             mRestart = savedInstanceState.getInt(RESTART_KEY);
@@ -68,11 +69,12 @@ public class ActivityOne extends ActionBarActivity {
             mCreate = savedInstanceState.getInt(CREATE_KEY);
 
         }
+        */
 
         // TODO: Emit LogCat message
         //Log.i("ActivityOne", "Entered the onCreate method");
 
-        mCreate++;
+        //mCreate++;
         //displayCounts();
     }
 
